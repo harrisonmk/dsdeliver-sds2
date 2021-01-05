@@ -23,7 +23,7 @@ public class OrdemServico {
     @Autowired
     private ProdutoRepositorio produtoRepositorio;
 
-    
+    //LISTAGEM
     @Transactional(readOnly = true) //apenas para operacao de leitura
     public List<OrdemDTO> findAll() {
 
@@ -34,7 +34,7 @@ public class OrdemServico {
     }
 
     
-    
+    //INSERT
     @Transactional(readOnly = false) //apenas para operacao de escrita
     public OrdemDTO insert(OrdemDTO dto) {
 
@@ -53,6 +53,19 @@ public class OrdemServico {
 
     }
 
+    
+    
+    //UPDATE
+   @Transactional(readOnly = false) //apenas para operacao de escrita
+   public OrdemDTO setDelivered(Long id){
+       
+     Ordem ordem = ordemRepositorio.getOne(id);
+     ordem.setStatus(OrderStatus.ENTREGUE);
+     ordem = ordemRepositorio.save(ordem);
+     
+     return new OrdemDTO(ordem);
+       
+   }
     
     
     
