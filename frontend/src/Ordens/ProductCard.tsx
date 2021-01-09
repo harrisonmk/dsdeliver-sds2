@@ -1,31 +1,22 @@
-
+import { formataPreco } from "./Helpers";
 import {Produto} from "./types";
 
 type Props = {
 
     produto: Produto;
-
-}
-
-function formataPreco(preco:number){
-
-    const formata = new Intl.NumberFormat('pt-BR', {
-        style:'currency',
-        currency:'BRL',
-        minimumFractionDigits: 2
-
-    });
-
-    return formata.format(preco);
+    onSelectProduct: (produto: Produto) => void;
+    isSelected: boolean;
 
 }
 
 
-function ProductCard({produto}: Props) {
+
+
+function ProductCard({produto,onSelectProduct,isSelected}: Props) {
 
     return (
 
-        <div className="order-card-container">
+        <div className={`order-card-container ${isSelected ? 'selected' : ''}`} onClick={() => onSelectProduct(produto)}>
             <h3 className="order-card-title">
                 {produto.nome}
             </h3>
