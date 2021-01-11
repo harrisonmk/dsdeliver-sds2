@@ -115,6 +115,18 @@ public class Ordem implements Serializable {
     public Set<Produto> getProdutos() {
         return produtos;
     }
+    
+    
+    public Double getTotal(){
+        
+      double soma = 0.0;
+      for(Produto p : produtos){
+          soma = soma + p.getPreco();
+      }
+      
+      return soma;
+        
+    }
 
     
     
