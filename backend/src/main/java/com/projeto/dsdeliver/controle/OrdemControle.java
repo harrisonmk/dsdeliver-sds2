@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-@RequestMapping(value = "orders")
+@RequestMapping(value = "/orders")
 public class OrdemControle {
 
     @Autowired
