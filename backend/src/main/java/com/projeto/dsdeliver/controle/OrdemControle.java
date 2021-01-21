@@ -2,6 +2,8 @@ package com.projeto.dsdeliver.controle;
 
 import com.projeto.dsdeliver.dto.OrdemDTO;
 import com.projeto.dsdeliver.servico.OrdemServico;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import java.net.URI;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+
+@Tag( name = "Api Rest Ordens")
 @RestController
 @RequestMapping(value = "/orders")
 public class OrdemControle {
@@ -23,7 +27,7 @@ public class OrdemControle {
     OrdemServico ordemServico;
 
     
-    
+    @Operation(summary="Retorna uma lista de ordens") 
     @GetMapping
     public ResponseEntity<List<OrdemDTO>> findAll() {
 
@@ -33,7 +37,7 @@ public class OrdemControle {
     }
 
     
-    
+    @Operation(summary="salva uma ordem") 
     @PostMapping
     public ResponseEntity<OrdemDTO> insert(@RequestBody OrdemDTO dto) {
 
@@ -44,7 +48,7 @@ public class OrdemControle {
     }
 
     
-    
+    @Operation(summary="atualiza status da ordem") 
     @PutMapping("/{id}/delivered")
     public ResponseEntity<OrdemDTO> setDelivered(@PathVariable Long id) {
 
