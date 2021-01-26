@@ -18,7 +18,7 @@
        * REACT NATIVE
    
    
-    Link documentacao Swagger - > https://dsdeliver-springboot.herokuapp.com/swagger-ui.html
+   Link documentacao Swagger - > https://dsdeliver-springboot.herokuapp.com/swagger-ui.html
     
-    Link Sistema WEB -> https://sds2-pedidos.netlify.app/
+   Link Sistema WEB -> https://sds2-pedidos.netlify.app/
   
