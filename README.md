@@ -1,21 +1,21 @@
 # dsdeliver-sds2
 
-#Recursos utilizados 
+# Recursos utilizados 
 
- #BACK END
+    # BACK END
 
-  * JAVA 11 LTS
-  * Spring boot
-  * Swagger
+     * JAVA 11 LTS
+     * Spring boot
+     * Swagger
   
-  #FRONT END
+    # FRONT END
   
-   * REACT JS
+     * REACT JS
    
    
-  # FRONT END MOBILE
-  
-   * REACT NATIVE
+    # FRONT END MOBILE
+   
+       * REACT NATIVE
    
    
     Link documentacao Swagger - > https://dsdeliver-springboot.herokuapp.com/swagger-ui.html
