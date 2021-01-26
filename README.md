@@ -6,6 +6,8 @@
 
      * JAVA 11 LTS
      * Spring boot
+     * JPA
+     * Postgresql
      * Swagger
   
     # FRONT END
